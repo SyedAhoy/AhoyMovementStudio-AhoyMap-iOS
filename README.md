@@ -40,9 +40,10 @@ The AhoyMap iOS SDK is built to provide seamless integration of Map functionalit
     ``` 
 - Now open the terminal and run the following command in the terminal
 
-       ```
-    pod install
-        ``` 
+     ```
+      pod install
+      
+     ``` 
 
 ## Usage
 - Open **AppDelegate** file of your project and add the following
