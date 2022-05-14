@@ -1,0 +1,20 @@
+PODS:
+  - AhoyHereSDK (0.0.1)
+  - AhoyMap (1.0.3):
+    - AhoyHereSDK
+
+DEPENDENCIES:
+  - AhoyMap
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - AhoyHereSDK
+    - AhoyMap
+
+SPEC CHECKSUMS:
+  AhoyHereSDK: c9ef9aa9a4528bdb97db71ca00e059871963e405
+  AhoyMap: ed5ce32a90457273e48aa5ae2237ecc334388c7f
+
+PODFILE CHECKSUM: 69a25fb775f95611138b50f975e97c11510097ca
+
+COCOAPODS: 1.11.2

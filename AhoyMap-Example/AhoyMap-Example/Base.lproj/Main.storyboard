@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eWd-yZ-VVz">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AhoyMap_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YkF-PH-Ago">
+                                <rect key="frame" x="161" y="432.5" width="92" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Show Map"/>
+                                <connections>
+                                    <action selector="showMapTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1PI-eh-2ZV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YkF-PH-Ago" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6a5-Pa-ouF"/>
+                            <constraint firstItem="YkF-PH-Ago" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="VUg-z0-sv4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="JDa-zg-mCr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="928.98550724637687" y="97.767857142857139"/>
+        </scene>
+        <!--Details View Controller-->
+        <scene sceneID="bh8-pL-T2e">
+            <objects>
+                <viewController storyboardIdentifier="DetailsVC" id="lq8-1a-OVv" customClass="DetailsViewController" customModule="AhoyMap_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="H9U-x1-jRe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nPE-GZ-6SA" customClass="AhoyMapView" customModule="AhoyMap">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vwb-Bd-G8F"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nPE-GZ-6SA" firstAttribute="top" secondItem="H9U-x1-jRe" secondAttribute="top" id="ITZ-FJ-aOs"/>
+                            <constraint firstItem="nPE-GZ-6SA" firstAttribute="trailing" secondItem="vwb-Bd-G8F" secondAttribute="trailing" id="Ox4-gq-Z9X"/>
+                            <constraint firstAttribute="bottom" secondItem="nPE-GZ-6SA" secondAttribute="bottom" id="SlW-fh-gkz"/>
+                            <constraint firstItem="nPE-GZ-6SA" firstAttribute="leading" secondItem="vwb-Bd-G8F" secondAttribute="leading" id="bnj-Mz-Hg2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="DcN-IM-kDu"/>
+                    <connections>
+                        <outlet property="ahoyMapView" destination="nPE-GZ-6SA" id="6bs-4a-Qig"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DOf-I1-aIC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1633" y="98"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6qg-vW-jEf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eWd-yZ-VVz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZS9-tw-3PZ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="sCa-K8-Rlc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lX6-vV-VYp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="97.767857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
