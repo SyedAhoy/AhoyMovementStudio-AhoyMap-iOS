@@ -101,7 +101,7 @@ The AhoyMap iOS SDK is built to provide seamless integration of Map functionalit
     ```
 - You should now see a polyline on your map passing through the given coordinates
 
-## Add PolyGon to the Map
+## Add Polygon to the Map
 - You can add a polygon on the map by using **addPolyLine** function of the AhoyMapView, sample implementation is as follows
 
     ```
