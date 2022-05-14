@@ -29,6 +29,7 @@ The AhoyMap iOS SDK is built to provide seamless integration of Map functionalit
     pod init
         ``` 
 - Open the  file in text editor and add the spec source at the top and the pod name  
+
     ```
     source 'https://github.com/CocoaPods/Specs' 
         target 'TestApp' do
@@ -38,16 +39,19 @@ The AhoyMap iOS SDK is built to provide seamless integration of Map functionalit
         end
     ``` 
 - Now open the terminal and run the following command in the terminal
+
        ```
     pod install
         ``` 
 
 ## Usage
 - Open **AppDelegate** file of your project and add the following
+
     ```
       import AhoyMap
     ``` 
 - Add the SDK initialisation function in the **didFinishLaunchingWithOptions** function of the **AppDelegate**, the SDK can be initialised through this function
+
     ```
        AhoySDKManager.shared()
             .ahoySDKKey("YOUR_AMS_SUBSCRIPTION_KEY")
@@ -59,6 +63,7 @@ The AhoyMap iOS SDK is built to provide seamless integration of Map functionalit
             .build()
     ```
 - Conform to the **AhoySDKManagerDelegate** in App delegate by doing so
+
     ```
     extension AppDelegate : AhoySDKManagerDelegate {
         func didFailtoInitialiseAhoyMapKitSDK(error: Error) {
@@ -80,6 +85,7 @@ The AhoyMap iOS SDK is built to provide seamless integration of Map functionalit
 
 ## Add Polyline to the Map
 - Make sure you have added AhoyMapView either through IBDesignable or through code and add the following function
+
     ```
          let geoCoordinatesArray = [
                 CLLocationCoordinate2D(latitude: 25.301249248421456, longitude: 55.37616902442195),
@@ -97,6 +103,7 @@ The AhoyMap iOS SDK is built to provide seamless integration of Map functionalit
 
 ## Add PolyGon to the Map
 - You can add a polygon on the map by using **addPolyLine** function of the AhoyMapView, sample implementation is as follows
+
     ```
          let geoCoordinatesArray = [
             CLLocationCoordinate2D(latitude: 25.301249248421456, longitude: 55.37616902442195),
@@ -111,6 +118,7 @@ The AhoyMap iOS SDK is built to provide seamless integration of Map functionalit
     ```
 ## Add Pin Annotation to the Map
 - The point annotation can be added to the map using the **addPointAnnotation** function of the AhoyMapView, the sample implementation is as follows
+
     ```
       do {
             try ahoyMapView.addPointAnnotation(location: CLLocationCoordinate2D(latitude: 25.301249248421456, longitude: 55.37616902442195), image: pinImage)
