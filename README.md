@@ -42,7 +42,6 @@ The AhoyMap iOS SDK is built to provide seamless integration of Map functionalit
 
      ```
       pod install
-      
      ``` 
 
 ## Usage
