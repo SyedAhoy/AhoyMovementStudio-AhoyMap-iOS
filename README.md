@@ -199,4 +199,6 @@ The AhoyMap iOS SDK is built to provide seamless integration of Map functionalit
       mapView.setMapScheme(scheme: .satellite)
     ```
 
+## **EXAMPLES**
+- The Examples Apps with of all the AhoyMap functions can be downloaded through this [Link](https://iossdk.blob.core.windows.net/iossdk/AMS-iOS-Examples.zip)
 
