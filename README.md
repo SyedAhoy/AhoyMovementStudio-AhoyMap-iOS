@@ -15,6 +15,9 @@ The AhoyMap iOS SDK is built to provide seamless integration of Map functionalit
 - Remove a polyline
 - Add a polygon
 - Remove a polygon
+- Set Zoom level of Map
+- Show traffic flow
+- Show location on Map
 - Load custom themes(Day/Night) etc
 
 
@@ -97,10 +100,6 @@ The AhoyMap iOS SDK is built to provide seamless integration of Map functionalit
             mapContainerView.addSubview(mapView)
         ```
 
-- The **AhoyMapSDK** offers AhoyMapView as an **IBDesignable** so all you need to do is just drop a UIView in xib/storyboard and select the custom class to AhoyMapView.
-- In case if the MapView is your rootViewController, please have a look at **AhoySDKManagerDelegate** in the AppDelegate to make sure the SDK has been initialised before loading your rootViewController, you can refer to the example project for details implementation.
-- You can just run the app to see the Map
-
 ## Add Polyline to the Map
 - Make sure you have added AhoyMapView either through IBDesignable or through code and add the following function
 
@@ -124,6 +123,7 @@ The AhoyMap iOS SDK is built to provide seamless integration of Map functionalit
 
 ## Removing a polyline from the Map
 - Removing a polyline is fairly straight forward, we just need to makesure to pass the same model which was passed while adding the polyline
+
     ```
         ahoyMapView.removePolyline(model: polyline)
     ```
@@ -146,6 +146,7 @@ The AhoyMap iOS SDK is built to provide seamless integration of Map functionalit
     ```
 ## Remove a polygon from Map
 - Removing a polygon is fairly straight forward, we just need to makesure to pass the same model which was passed while adding the polygon
+
     ```
         mapView.removePolygon(polygon: polygon)
     ```
@@ -164,24 +165,38 @@ The AhoyMap iOS SDK is built to provide seamless integration of Map functionalit
 
 ## Remove the marker
 - A marker can be removed from the map using the **removeMarker** function, we just need to makesure to pass the same model which was passed while adding the marker
+
     ```
         mapView.removeMarker(marker: marker)
     ```
 
 ## Set Zoom Level of Map
 - The Zoom level of map can be set within the range [0-22] using the **setZoomLevel** function
+
     ```
         mapView.setZoomLevel(level: 22)
     ```
+    
 ## Toggle traffic flow on the Map
 - The traffic flow on the map can be enabled/disabled using the **showTrafficFlow** as follows
+
     ```
         mapView.showTrafficFlow(isTrafficOn: true)
     ```
+    
 ## Show certain location on the Map
 - If you wanted to show a certain location on the map that can be done using the **moveCamera** function as follows
+
     ```
         let locationCoordinates = CLLocationCoordinate2D(latitude: 25.302506048147787, longitude: 55.375242494744285)
         mapView.moveCamera(coordinates: locationCoordinates)
     ```
+    
+## Set Map Scheme for Map
+- AhoyMap supports wide range of map schemes those can be set using the **setMapScheme** as follows
+
+    ```
+      mapView.setMapScheme(scheme: .satellite)
+    ```
+
 
